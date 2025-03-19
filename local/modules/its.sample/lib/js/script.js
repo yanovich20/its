@@ -34,13 +34,16 @@ document.addEventListener(
             let description = document.querySelector("[name='input-description']").value;
             let title = document.querySelector("[name='input-title']").value;
             let url = window.location.pathname;
-            data = {
+            let data = {
                 "UF_TITLE": title,
                 "UF_DESCRIPTION": description,
                 "UF_URL": url
             }
             BX.ajax.runAction("its:sample.TitleAndDescriptionController.save", { data: data }).then(function (response) {
                 showMessage(response.data.message);
+                document.querySelector('meta[name="description"]').setAttribute("content", description);
+                document.title = title;
+                document.querySelector("#pagetitle").innerText = title;
             });
         });
         titleDescriptionContainer.append(labelTitle);

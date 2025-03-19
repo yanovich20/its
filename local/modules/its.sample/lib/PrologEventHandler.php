@@ -18,7 +18,7 @@ class PrologEventHandler{
             ))->fetch();
             if(empty($userContentEditor))
                 return;
-            Asset::getInstance()->addJs("/local/modules/its.sample/lib/js/script.js");
+            Asset::getInstance()->addJs("/local/modules/its.sample/lib/js/script.js",true);
             Asset::getInstance()->addCss("/local/modules/its.sample/lib/css/styles.css");
             Extension::load("ui.dialogs.messagebox");
         }

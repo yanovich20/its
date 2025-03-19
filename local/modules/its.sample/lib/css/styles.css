@@ -1,0 +1,38 @@
+.title-description-container{
+    display:flex;
+    position:absolute;
+    top:-28px;
+    left:auto;
+    height:25px;
+    padding-bottom:25px;
+    flex-direction:row;
+    align-items:center;
+    justify-content: center;
+}
+.content-input{
+    display:inline-flex;
+    z-index:500;
+    margin:6px;
+    padding:3px;
+    font-size:14px;
+    align-items:center;
+    justify-content: center;
+}
+.label
+{
+    display:inline-flex;
+    margin:6px;
+    padding:3px;
+    font-size:14px;
+}
+#btn-send{
+    display:inline-flex;
+    background-color:rgb(177,255,177);
+    margin:6px;
+    padding:3px;
+    font-size:14px;
+}
+#header{
+    top:30px;
+    left:auto;
+}
